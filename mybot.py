@@ -8,7 +8,7 @@ bot = telebot.TeleBot('5974012175:AAELRJhSTpGDazZTosiBGUYvKx_pw4C2LIg')
 def send_welcome(message):
     bot.reply_to(message, "Welcome to Chitkara Mess Reminder Bot")
 
-print("hrllo hhh")
+print("Bot is running")
 breakfast=["Aloo Parantha + Curd/Butter + Pickle +Tea","Pav Bhaji + Tea","Ajwain Parantha Aloo ki sabzi + Pickle + Tea","Macroni bread Jam & bread Butter+ Coffee","Methi Parantha+ Curd + Pickle+ Tea","(Mix/Gobhi Parantha) +Curd/Butter +Tea","Vegetable Sandwich + Sweet Daliya + Tea"]
 lunch=["Rajmah Masala +Aloo Jeera + Steamed Rice + Roti +Boondi Raita","Mah Channa dal+ Aloo Methi + Steamed Rice+Roti + Raita + Pickle","Dal Makhni + Aloo Gajar Muttar + Steamed Rice +Roti +Mint Raita",	"Kadhi Pakoda + Aloo Muttar +Steamed Rice + Roti +Salad+ Pickle","Black Channa+ Chinese Nutri+ Steamed Rice + Roti +Cucumber raita",	"Dal Tadka + Kofta Curry +Roti +Steamed Rice+salad","Dal Makhni + Vegetable Pulao + Roti +Aloo Raita/ (white Channa+Kulcha +Steamed Rice +Mix Raita + Pickle)"]
 snacks=["Bread Pakoda(G)/Cake (B) +Tea","Patty(G)/ Samosa(B) + Tomato Ketchup/Sonth Chutney + Tea","Bread Pakoda(B)/ Cake (G)+ Tea","Multigrain chips/ Noodles Masala + Tea","Samosa (G)/ Patty(B) + Tomato Ketchup/Sonth Chutney + Tea","Biscuit + Coffee","Namkeen + Tea"]

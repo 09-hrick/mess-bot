@@ -54,4 +54,6 @@ while(True):
         bot.send_message(chat_id="-1001524941511",text=dinner[day])
         time.sleep(60)
 
-bot.infinity_polling()
+# bot.infinity_polling()
+bot.start_polling()
+bot.idle()

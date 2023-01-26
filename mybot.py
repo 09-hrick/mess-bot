@@ -1,5 +1,7 @@
-import os
+
+# import os
 import telebot
+import time
 from datetime import datetime
 
 # BOT_TOKEN = os.environ.get('BOT_TOKEN')
@@ -18,25 +20,36 @@ dtobj=datetime.now()
 day=dtobj.weekday()
 timeofnow=dtobj.strftime("%H:%M")
 """
-breakfast: 7:30
-lunch: 12:00
-snacks: 5
-dinner: 7:30
+breakfast: 7:30 2:00 gmt
+lunch: 12:00 6:30 gmt
+snacks: 5 11:30 gmt
+dinner: 7:30 14:00 gmt
 
 """
 hrs=timeofnow.split(':')
-mins=int(hrs[1])
-hrs=int(hrs[0])
+mins=int(hrs[1])+5
+hrs=int(hrs[0])+30
 print(type(breakfast[day]))
 # bot.send_message(chat_id="-1001524941511",text=breakfast[day])
 
-if(hrs==7 and mins==15):
-    bot.send_message(chat_id="-1001524941511",text=breakfast[day])
-if(hrs==11 and mins==45):
-    bot.send_message(chat_id="-1001524941511",text=lunch[day])
-if(hrs==4 and mins==30):
-    bot.send_message(chat_id="-1001524941511",text=snacks[day])
-if(hrs==7 and mins==15):
-    bot.send_message(chat_id="-1001524941511",text=dinner[day])
+# bot.send_message(chat_id="-1001524941511",text="this is a test message")
+print(hrs,mins)
+while(True):
+    # if(hrs==7 and mins==30):
+    #     bot.send_message(chat_id="-1001524941511",text="test mess 2")
+    #     time.sleep(60)
+
+    if(hrs==7 and mins==30):
+        bot.send_message(chat_id="-1001524941511",text=breakfast[day])
+        time.sleep(60)
+    if(hrs==12 and mins==0):
+        bot.send_message(chat_id="-1001524941511",text=lunch[day])
+        time.sleep(60)
+    if(hrs==5 and mins==00):
+        bot.send_message(chat_id="-1001524941511",text=snacks[day])
+        time.sleep(60)
+    if(hrs==7 and mins==30):
+        bot.send_message(chat_id="-1001524941511",text=dinner[day])
+        time.sleep(60)
 
 bot.infinity_polling()

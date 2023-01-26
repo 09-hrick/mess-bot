@@ -28,7 +28,9 @@ dinner: 7:30 14:00 gmt
 """
 hrs=timeofnow.split(':')
 mins=int(hrs[1])+30
-hrs=int(hrs[0])+5
+hrs=int(hrs[0])+5+int(mins/60)
+if(mins>60):
+    mins=mins-60
 print(type(breakfast[day]))
 # bot.send_message(chat_id="-1001524941511",text=breakfast[day])
 

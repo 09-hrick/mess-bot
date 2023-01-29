@@ -36,7 +36,7 @@ dinner: 7:30 14:00 gmt
 # bot.send_message(chat_id="-1001524941511",text=breakfast[day])
 
 # bot.send_message(chat_id="-1001524941511",text="this is a test message")
-print(hrs,mins)
+# print(hrs,mins)
 @bot.message_handler(commands=['breakfast', 'Breakfast'])
 def send_welcome(message):
     bot.reply_to(message, breakfast[day])

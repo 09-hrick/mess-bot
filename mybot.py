@@ -9,6 +9,7 @@ bot = telebot.TeleBot('5974012175:AAELRJhSTpGDazZTosiBGUYvKx_pw4C2LIg')
 @bot.message_handler(commands=['start', 'hello'])
 def send_welcome(message):
     bot.reply_to(message, "Welcome to Chitkara Mess Reminder Bot")
+    bot.reply_to(message, "/breakfast /n /lunch /n /snacks /n /dinner")
 
 print("Bot is running")
 breakfast=["Aloo Parantha + Curd/Butter + Pickle +Tea","Pav Bhaji + Tea","Ajwain Parantha Aloo ki sabzi + Pickle + Tea","Macroni bread Jam & bread Butter+ Coffee","Methi Parantha+ Curd + Pickle+ Tea","(Mix/Gobhi Parantha) +Curd/Butter +Tea","Vegetable Sandwich + Sweet Daliya + Tea"]
@@ -18,7 +19,7 @@ dinner=["Moong Saboot Dal +Muttar Paneer +Steamed Rice + Roti+ Pickle+ Ladoo","A
 
 dtobj=datetime.now()
 day=dtobj.weekday()
-timeofnow=dtobj.strftime("%H:%M")
+# timeofnow=dtobj.strftime("%H:%M")
 """
 breakfast: 7:30 2:00 gmt
 lunch: 12:00 6:30 gmt
@@ -26,12 +27,12 @@ snacks: 5 11:30 gmt
 dinner: 7:30 14:00 gmt
 
 """
-hrs=timeofnow.split(':')
-mins=int(hrs[1])+30
-hrs=int(hrs[0])+5+int(mins/60)
-if(mins>60):
-    mins=mins-60
-print(type(breakfast[day]))
+# hrs=timeofnow.split(':')
+# mins=int(hrs[1])+30
+# hrs=int(hrs[0])+5+int(mins/60)
+# if(mins>60):
+#     mins=mins-60
+# print(type(breakfast[day]))
 # bot.send_message(chat_id="-1001524941511",text=breakfast[day])
 
 # bot.send_message(chat_id="-1001524941511",text="this is a test message")

@@ -8,9 +8,7 @@ from datetime import datetime
 bot = telebot.TeleBot('5974012175:AAELRJhSTpGDazZTosiBGUYvKx_pw4C2LIg')
 @bot.message_handler(commands=['start', 'hello'])
 def send_welcome(message):
-    bot.reply_to(message, "Welcome to Chitkara Mess Reminder Bot")
-    bot.reply_to(message, "/breakfast /n /lunch /n /snacks /n /dinner")
-
+    bot.reply_to(message, "Welcome to Chitkara Mess Reminder Bot \n to view the menu use the following commands \n /breakfast \n /lunch \n /snacks \n /dinner")
 print("Bot is running")
 breakfast=["Aloo Parantha + Curd/Butter + Pickle +Tea","Pav Bhaji + Tea","Ajwain Parantha Aloo ki sabzi + Pickle + Tea","Macroni bread Jam & bread Butter+ Coffee","Methi Parantha+ Curd + Pickle+ Tea","(Mix/Gobhi Parantha) +Curd/Butter +Tea","Vegetable Sandwich + Sweet Daliya + Tea"]
 lunch=["Rajmah Masala +Aloo Jeera + Steamed Rice + Roti +Boondi Raita","Mah Channa dal+ Aloo Methi + Steamed Rice+Roti + Raita + Pickle","Dal Makhni + Aloo Gajar Muttar + Steamed Rice +Roti +Mint Raita",	"Kadhi Pakoda + Aloo Muttar +Steamed Rice + Roti +Salad+ Pickle","Black Channa+ Chinese Nutri+ Steamed Rice + Roti +Cucumber raita",	"Dal Tadka + Kofta Curry +Roti +Steamed Rice+salad","Dal Makhni + Vegetable Pulao + Roti +Aloo Raita/ (white Channa+Kulcha +Steamed Rice +Mix Raita + Pickle)"]

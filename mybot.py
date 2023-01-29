@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 # BOT_TOKEN = os.environ.get('BOT_TOKEN')
-bot = telebot.TeleBot('5974012175:AAELRJhSTpGDazZTosiBGUYvKx_pw4C2LIg')
+bot = telebot.TeleBot('api_token')
 @bot.message_handler(commands=['start', 'hello'])
 def send_welcome(message):
     bot.reply_to(message, "Welcome to Chitkara Mess Reminder Bot \n to view the menu use the following commands \n /breakfast \n /lunch \n /snacks \n /dinner")

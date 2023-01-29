@@ -36,24 +36,36 @@ print(type(breakfast[day]))
 
 # bot.send_message(chat_id="-1001524941511",text="this is a test message")
 print(hrs,mins)
-while(True):
-    # if(hrs==7 and mins==30):
-    #     bot.send_message(chat_id="-1001524941511",text="test mess 2")
-    #     time.sleep(60)
+@bot.message_handler(commands=['breakfast', 'Breakfast'])
+def send_welcome(message):
+    bot.reply_to(message, breakfast[day])
+@bot.message_handler(commands=['lunch', 'Lunch'])
+def send_welcome(message):
+    bot.reply_to(message, lunch[day])
+@bot.message_handler(commands=['snacks', 'Snacks'])
+def send_welcome(message):
+    bot.reply_to(message, snacks[day])
+@bot.message_handler(commands=['dinner', 'Dinner'])
+def send_welcome(message):
+    bot.reply_to(message, dinner[day])
+# while(True):
+#     # if(hrs==7 and mins==30):
+#     #     bot.send_message(chat_id="-1001524941511",text="test mess 2")
+#     #     time.sleep(60)
 
-    if(hrs==7 and mins==30):
-        bot.send_message(chat_id="-1001524941511",text=breakfast[day])
-        time.sleep(60)
-    if(hrs==12 and mins==0):
-        bot.send_message(chat_id="-1001524941511",text=lunch[day])
-        time.sleep(60)
-    if(hrs==5 and mins==00):
-        bot.send_message(chat_id="-1001524941511",text=snacks[day])
-        time.sleep(60)
-    if(hrs==7 and mins==30):
-        bot.send_message(chat_id="-1001524941511",text=dinner[day])
-        time.sleep(60)
+#     if(hrs==7 and mins==30):
+#         bot.send_message(chat_id="-1001524941511",text=breakfast[day])
+#         time.sleep(60)
+#     if(hrs==12 and mins==0):
+#         bot.send_message(chat_id="-1001524941511",text=lunch[day])
+#         time.sleep(60)
+#     if(hrs==5 and mins==00):
+#         bot.send_message(chat_id="-1001524941511",text=snacks[day])
+#         time.sleep(60)
+#     if(hrs==7 and mins==30):
+#         bot.send_message(chat_id="-1001524941511",text=dinner[day])
+#         time.sleep(60)
 
-# bot.infinity_polling()
-bot.start_polling()
-bot.idle()
+bot.infinity_polling()
+# bot.start_polling()
+# bot.idle()

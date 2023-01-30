@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 # BOT_TOKEN = os.environ.get('BOT_TOKEN')
-bot = telebot.TeleBot('api_token')
+bot = telebot.TeleBot('API_KEY')
 @bot.message_handler(commands=['start', 'hello'])
 def send_welcome(message):
     bot.reply_to(message, "Welcome to Chitkara Mess Reminder Bot \n to view the menu use the following commands \n /breakfast \n /lunch \n /snacks \n /dinner")
@@ -15,8 +15,8 @@ lunch=["Rajmah Masala +Aloo Jeera + Steamed Rice + Roti +Boondi Raita","Mah Chan
 snacks=["Bread Pakoda(G) / Cake (B) +Tea","Patty(G) /  Samosa(B) + Tomato Ketchup / Sonth Chutney + Tea","Bread Pakoda(B) /  Cake (G)+ Tea","Multigrain chips /  Noodles Masala + Tea","Samosa (G) /  Patty(B) + Tomato Ketchup / Sonth Chutney + Tea","Biscuit + Coffee","Namkeen + Tea"]
 dinner=["Moong Saboot Dal +Muttar Paneer +Steamed Rice + Roti+ Pickle+ Ladoo","Arhar Malka Dal Vegetable Fried Rice + Vegetable Manchurian +Roti +Pickle + Gulab Jamun","Saboot Masoor +Pindi Channa +Roti Rice+ Hot Milk","Rajmah Masala+ Aloo Gobhi + Steamed Rice + Roti Pickle+ Basen Ke Ladoo /  Sweet Dish","Moong Masoor Dal + Kadhal Paneer / Mutter Pancer Egg Curry+ Rice + Roti + Rasgulla","Dal Lobhia+Mix Vegetable + Roti + Rice+ Hot Milk (G) / Gulab Jamun (B)","Sambhar /  Channa Dal +Chilli Potato  /  Aloo South Indian + Rice + Roti +Gulab Jamun (G) / Hot Milk (B)"]
 
-dtobj=datetime.now()
-day=dtobj.weekday()
+# dtobj=datetime.now()
+# day=dtobj.weekday()
 # timeofnow=dtobj.strftime("%H:%M")
 """
 breakfast: 7:30 2:00 gmt
@@ -36,16 +36,24 @@ dinner: 7:30 14:00 gmt
 # bot.send_message(chat_id="-1001524941511",text="this is a test message")
 # print(hrs,mins)
 @bot.message_handler(commands=['breakfast', 'Breakfast'])
-def send_welcome(message):
+def Breakfast(message):
+    dtobj=datetime.now()
+    day=dtobj.weekday()
     bot.reply_to(message, breakfast[day])
 @bot.message_handler(commands=['lunch', 'Lunch'])
-def send_welcome(message):
+def Lunch(message):
+    dtobj=datetime.now()
+    day=dtobj.weekday()
     bot.reply_to(message, lunch[day])
 @bot.message_handler(commands=['snacks', 'Snacks'])
-def send_welcome(message):
+def Snacks(message):
+    dtobj=datetime.now()
+    day=dtobj.weekday()
     bot.reply_to(message, snacks[day])
 @bot.message_handler(commands=['dinner', 'Dinner'])
-def send_welcome(message):
+def Dinner(message):
+    dtobj=datetime.now()
+    day=dtobj.weekday()
     bot.reply_to(message, dinner[day])
 # while(True):
 #     # if(hrs==7 and mins==30):

@@ -1,1 +1,1 @@
-# mess-reminder-bot
+# mess-bot
